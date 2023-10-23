@@ -7,12 +7,12 @@ import { FetchAPI } from "./api/FetchAPI";
 const App = () => {
   const [query, setQuery] = useState("");
   const [weather, setWeather] = useState({});
-
+  
   const search = async (e) => {
     if (e.key == "Enter") {
       const data = await FetchAPI(query);
       setWeather(data);
-      setQuery(" ");
+      setQuery("");
     }
   };
   return (
@@ -32,9 +32,7 @@ const App = () => {
         {/* <button className='send_btn' onClick={()=>search()}>Search</button> */}
       </center>
       <center>
-        {query && 
         <Card weather={weather}/>
-        }
       </center>
     </div>
   );
