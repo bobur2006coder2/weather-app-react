@@ -1,0 +1,65 @@
+.parent {
+    color: white;
+    .nav_container {
+        margin: 0 auto;
+        background: repeating-linear-gradient(-45deg, rgb(46, 46, 46) 0%, rgb(0, 0, 0) 1%);
+        padding: 20px;
+        text: {
+            align: center;
+            transform: capitalize;
+        };
+        font-size: 20px;
+    };
+    .search_inp {
+        border: none;
+        outline: none;
+        border-bottom: 2px solid yellow;
+        width: 40%;
+        margin: {
+            top: 50px;
+        };
+        font: {
+            size: 18px;
+            weight:bold;
+        } ;
+    };
+    .card{
+        margin: 20px auto;
+        color: black;
+        background: rgb(234, 234, 234,0.1);
+        box-shadow: -5px -1px 20px rgb(109, 106, 106);
+        // width: 25%;
+        border: {
+            radius:20px;
+            color: yellow;
+            width: 5px;
+        };
+       &:hover{
+        scale: 0.990;
+        cursor: pointer;
+        
+       };
+        padding: 10px;
+        .img_card{
+            width: 100px;
+        }
+    }
+    .send_btn{
+        background: #000;
+        color: white;
+        padding: 5px 25px;
+        border-radius: 10px;
+        cursor: pointer;
+        &:hover{scale: 0.970;}
+    }
+}
+@media (min-width: 360px) {
+    .card{
+        width:50%; 
+    }
+}
+@media (min-width: 780px) {
+    .card{
+        width:25%; 
+    }
+}
